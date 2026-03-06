@@ -8,6 +8,11 @@ const path = require("path");
 app.set("view Engine","ejs");
 app.set("views", path.join(__dirname,"/views"));
 
+app.get("/colors", (req,res) =>{
+     res.render("color.ejs");
+     console.log("Request Received");
+});
+
 app.get("/home", (req,res) =>{
      res.render("home.ejs");
      console.log("Request Received");
